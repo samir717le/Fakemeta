@@ -41,7 +41,7 @@ app.post('/generate', (req, res) => {
     `;
 
     // Save the file with a unique name in the public directory
-    const filename = generateUniqueFilename();
+    const filename = generateUniqueFilename() + ".html;
     const filePath = path.join(__dirname, 'public', filename);
 
     fs.writeFile(filePath, metadata, (err) => {
